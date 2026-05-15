@@ -1,57 +1,23 @@
-import React from "react"
-import { AiFillGithub, AiFillLinkedin, AiOutlineMail, AiOutlineWhatsApp,} from "react-icons/ai"
+import React from "react";
+import { AiFillGithub, AiFillLinkedin, AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 
-export const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="bg-slate-100 dark:bg-slate-950 dark:text-white py-10">
-      <div className="container mx-auto px-4 text-center space-y-6">
+    <footer className="bg-slate-100 dark:bg-slate-950 dark:text-white py-12 px-5">
+      <div className="max-w-6xl mx-auto text-center space-y-6">
+        <h2 className="text-2xl font-semibold">Henry Godwin</h2>
 
-        {/* Name */}
-        <h2 className="text-xl font-semibold">Henry Godwin</h2>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-6 text-2xl">
-
-          <a
-            href="https://github.com/henrygodwin650"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition"
-          >
-            <AiFillGithub />
-          </a>
-
-          <a
-            href="https://linkedIn.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-blue-500 transition"
-          >
-            <AiFillLinkedin />
-          </a>
-
-          <a
-            href="mailto:henrygodwin650@gmail.com"
-            className="hover:text-green-500 transition"
-          >
-            <AiOutlineWhatsApp />
-          </a>
-
-          <a
-            href="mailto:henrygodwin650@gmail.com"
-            className="hover:text-red-500 transition"
-          >
-            <AiOutlineMail />
-          </a>
-
+        <div className="flex justify-center gap-8 text-3xl">
+          <a href="https://github.com/henrygodwin650" target="_blank" className="hover:text-orange-500 transition"><AiFillGithub /></a>
+          <a href="https://linkedin.com/in/Henry-Godwin" target="_blank" className="hover:text-orange-500 transition"><AiFillLinkedin /></a>
+          <a href="https://wa.me/2349074229485" target="_blank" className="hover:text-orange-500 transition"><AiOutlineWhatsApp /></a>
+          <a href="mailto:henrygodwin650@gmail.com" className="hover:text-orange-500 transition"><AiOutlineMail /></a>
         </div>
 
-        {/* Copyright */}
-        <p className="text-sm text-gray-600 dark:text-gray-400">
-          &copy; {new Date().getFullYear()} Henry Godwin. All rights reserved.
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          © {new Date().getFullYear()} Henry Godwin. All Rights Reserved.
         </p>
-
       </div>
     </footer>
-  )
+  );
 }

@@ -1,53 +1,54 @@
-import React from 'react'
-import { AiFillGithub, AiFillLinkedin, AiFillMail, AiOutlineMail, AiOutlineWhatsApp, } from "react-icons/ai"
+import React from 'react';
+import { 
+  AiFillGithub, 
+  AiFillLinkedin, 
+  AiOutlineMail, 
+  AiOutlineWhatsApp 
+} from "react-icons/ai";
 
 const Contact = () => {
   return (
-    <div id='contact' className="mx-auto flex flex-col sm:columns-2 py-4  items-center justify-around">
+    <section id="contact" className="py-16 md:py-20 px-5 bg-white dark:bg-slate-950">
+      <div className="max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl dark:text-white/80 font-bold mb-3">Contact Me</h2>
+          <p className="text-gray-600 dark:text-gray-400">
+            Let’s connect — I’m open to opportunities and collaborations
+          </p>
+        </div>
 
-      <h1 className="inline-block text-3xl font-bold mb-3 border-b-2 border-orange-500 pb-1">Contact</h1>
-      <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6'>
-        <div className="mt-5"><a
-          href="https://linkedIn.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="text-gray-500 text-4xl px-8 border-3 transition rounded-xl py-1 hover:bg-gray-500 hover:text-white bg-white border-gray-500" type="button">
-            <AiFillLinkedin />
-          </button>
-        </a>
-          <p className="text-gray-600 text-center font-semibold">GitHub</p>
-        </div>
-        <div className="mt-5"><a
-          href="https://linkedIn.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <button className="text-blue-500 hover:bg-blue-500 rounded-xl text-4xl px-8 border-3 py-1 hover:text-white border-blue-500" type="button"><AiFillLinkedin /></button>
-        </a>
-          <p className="text-blue-600 text-center font-semibold">LinkedIn</p>
-        </div>
-        <div className="mt-5">
-          <a
-            href="mailto:henrygodwin650@gmail.com"
-            className=""
-          >
-            <button className="text-green-500 cursor-pointer text-4xl px-8 border-3 rounded-xl hover:bg-green-500 py-1 hover:text-white transition border-green-500 bg-white" type="button">
-              <AiOutlineWhatsApp />
-            </button>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <a href="https://github.com/henrygodwin650" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="contact-card">
+              <AiFillGithub className="text-5xl group-hover:scale-110 transition" />
+              <p className="mt-4 font-semibold">GitHub</p>
+            </div>
           </a>
-          <p className="text-green-500 text-center font-semibold">WhatsApp</p>
-        </div>
-        <div className="mt-5">
-          <a 
-          href="mailto:henrygodwin650@gmail.com">
-            <button className="text-red-500 text-4xl px-8 rounded-xl py-1 hover:bg-red-500 hover:text-white border-3 cursor-pointer border-red-500" type="button"><AiFillMail /></button>
+
+          <a href="https://linkedin.com/in/Henry-Godwin" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="contact-card">
+              <AiFillLinkedin className="text-5xl text-blue-600 group-hover:scale-110 transition" />
+              <p className="mt-4 font-semibold text-blue-600">LinkedIn</p>
+            </div>
           </a>
-          <p className="text-center text-red-500 font-semibold">E-mail</p>
+
+          <a href="https://wa.me/2349074229485" target="_blank" rel="noopener noreferrer" className="group">
+            <div className="contact-card">
+              <AiOutlineWhatsApp className="text-5xl text-green-600 group-hover:scale-110 transition" />
+              <p className="mt-4 font-semibold text-green-600">WhatsApp</p>
+            </div>
+          </a>
+
+          <a href="mailto:henrygodwin650@gmail.com" className="group">
+            <div className="contact-card">
+              <AiOutlineMail className="text-5xl text-red-500 group-hover:scale-110 transition" />
+              <p className="mt-4 font-semibold text-red-500">Email</p>
+            </div>
+          </a>
         </div>
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;
