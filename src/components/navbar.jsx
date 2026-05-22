@@ -4,7 +4,10 @@ import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 
 export default function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light"
+  );
 
   useEffect(() => {
     if (theme === "dark") {
@@ -12,10 +15,13 @@ export default function Navbar() {
     } else {
       document.documentElement.classList.remove("dark");
     }
+
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  const toggleTheme = () => setTheme(prev => prev === "dark" ? "light" : "dark");
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+  };
 
   const navMenus = [
     { name: "Home", link: "#home" },
@@ -26,50 +32,133 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-gray-100 dark:bg-gray-900 top-0 z-50 sticky shadow-sm border-b border-gray-200 dark:border-gray-700 dark:text-white">
-      <div className="max-w-6xl mx-auto px-5 py-4 flex justify-between items-center">
-        <h1 className="text-3xl font-bold text-orange-500">Portfolio</h1>
+    <nav
+      className="
+        sticky top-0 z-50
+        backdrop-blur-lg
+        bg-white/70 dark:bg-slate-950/70
+        border-b border-gray-200 dark:border-slate-800
+        shadow-sm
+      "
+    >
+      <div className="max-w-7xl mx-auto px-5 lg:px-8 py-4 flex items-center justify-between">
 
-        {/* Desktop */}
+        {/* Logo */}
+        <a
+          href="#home"
+          className="text-3xl font-extrabold tracking-wide"
+        >
+          <span className="text-orange-500">Port</span>
+          <span className="text-slate-800 dark:text-white">
+            folio
+          </span>
+        </a>
+
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          {navMenus.map(menu => (
-            <a key={menu.name} href={menu.link} className="hover:text-orange-500 transition font-medium">
+
+          {navMenus.map((menu, index) => (
+            <a
+              key={index}
+              href={menu.link}
+              className="
+                relative text-[16px] font-medium
+                text-slate-700 dark:text-slate-200
+                hover:text-orange-500
+                transition duration-300
+                after:absolute after:left-0 after:-bottom-1
+                after:w-0 after:h-[2px]
+                after:bg-orange-500
+                after:transition-all after:duration-300
+                hover:after:w-full
+              "
+            >
               {menu.name}
             </a>
           ))}
-          <button onClick={toggleTheme} className="text-2xl hover:text-orange-500 transition">
-            {theme === "dark" ? <BiSolidSun /> : <BiSolidMoon />}
+
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="
+              text-2xl
+              text-slate-700 dark:text-slate-200
+              hover:text-orange-500
+              transition duration-300
+              hover:rotate-180
+            "
+          >
+            {theme === "dark" ? (
+              <BiSolidSun />
+            ) : (
+              <BiSolidMoon />
+            )}
           </button>
         </div>
 
-        {/* Mobile */}
+        {/* Mobile Controls */}
         <div className="md:hidden flex items-center gap-4">
-          <button onClick={toggleTheme} className="text-2xl">
-            {theme === "dark" ? <BiSolidSun /> : <BiSolidMoon />}
+
+          {/* Theme */}
+          <button
+            onClick={toggleTheme}
+            className="
+              text-2xl
+              text-slate-700 dark:text-white
+              hover:text-orange-500
+              transition
+            "
+          >
+            {theme === "dark" ? (
+              <BiSolidSun />
+            ) : (
+              <BiSolidMoon />
+            )}
           </button>
-          <button onClick={() => setShowMenu(!showMenu)} className="text-3xl">
+
+          {/* Menu Toggle */}
+          <button
+            onClick={() => setShowMenu(!showMenu)}
+            className="
+              text-3xl
+              text-slate-700 dark:text-white
+              hover:text-orange-500
+              transition
+            "
+          >
             {showMenu ? <FiX /> : <FiMenu />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {showMenu && (
-        <div className="md:hidden bg-white/50 dark:bg-gray-900 border-t shadow-2xl py-6">
-          <div className="flex flex-col items-center gap-6 text-lg">
-            {navMenus.map(menu => (
-              <a 
-                key={menu.name} 
-                href={menu.link} 
-                onClick={() => setShowMenu(false)}
-                className="hover:text-orange-500"
-              >
-                {menu.name}
-              </a>
-            ))}
-          </div>
+      <div
+        className={`
+          md:hidden overflow-hidden transition-all duration-500
+          ${showMenu ? "max-h-96 py-6" : "max-h-0"}
+          bg-white/95 dark:bg-slate-950/95
+          backdrop-blur-lg
+        `}
+      >
+        <div className="flex flex-col items-center gap-6 text-lg">
+
+          {navMenus.map((menu, index) => (
+            <a
+              key={index}
+              href={menu.link}
+              onClick={() => setShowMenu(false)}
+              className="
+                text-slate-700 dark:text-slate-200
+                hover:text-orange-500
+                transition duration-300
+                font-medium
+              "
+            >
+              {menu.name}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }

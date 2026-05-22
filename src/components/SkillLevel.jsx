@@ -1,20 +1,60 @@
-import React from 'react';
+import React from "react";
 
-export default function SkillLevel({ skillName, percentage }) {
+export default function SkillLevel({
+  skillName,
+  percentage,
+  color = "from-orange-500 to-orange-400",
+}) {
   return (
-    <div className="space-y-3">
-      <div className="flex justify-between items-center">
-        <p className="font-semibold text-lg text-gray-800 dark:text-white">
+    <div
+      className="
+        group
+        p-5 rounded-2xl
+        bg-white/60 dark:bg-slate-800/60
+        backdrop-blur-lg
+        border border-gray-200 dark:border-slate-700
+        hover:shadow-xl
+        transition-all duration-300
+        hover:-translate-y-1
+      "
+    >
+
+      {/* Top */}
+      <div className="flex justify-between items-center mb-3">
+        <h3
+          className="
+            text-lg font-semibold
+            text-slate-800 dark:text-white
+          "
+        >
           {skillName}
-        </p>
-        <p className="font-medium text-orange-600 dark:text-orange-500">
+        </h3>
+
+        <span
+          className="
+            text-sm font-bold
+            text-orange-500
+          "
+        >
           {percentage}%
-        </p>
+        </span>
       </div>
 
-      <div className="w-full bg-slate-200 dark:bg-gray-700 h-3 rounded-full overflow-hidden">
+      {/* Progress */}
+      <div
+        className="
+          w-full h-3
+          bg-slate-200 dark:bg-slate-700
+          rounded-full overflow-hidden
+        "
+      >
         <div
-          className="h-full bg-orange-500 rounded-full transition-all duration-1000 ease-out"
+          className={`
+            h-full rounded-full
+            bg-gradient-to-r ${color}
+            transition-all duration-1000 ease-out
+            group-hover:animate-pulse
+          `}
           style={{ width: `${percentage}%` }}
         />
       </div>
