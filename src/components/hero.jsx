@@ -1,5 +1,5 @@
 import React from "react";
-import UserImage from "../assets/2026-02-07 (5).jpg";
+import UserImage from "../assets/c8faa621-9e24-400b-afd9-cf5e46354090.png";
 
 export default function Hero() {
   return (
@@ -10,7 +10,7 @@ export default function Hero() {
           <p className="uppercase tracking-widest text-orange-600 font-medium text-sm md:text-base">
             Hello, I'm
           </p>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl dark:text-white font-bold leading-tight">
             Henry Godwin
           </h1>
           <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300">

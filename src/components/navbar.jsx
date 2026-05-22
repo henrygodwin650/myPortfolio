@@ -55,7 +55,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {showMenu && (
-        <div className="md:hidden bg-white dark:bg-gray-900 border-t py-6">
+        <div className="md:hidden bg-white/50 dark:bg-gray-900 border-t shadow-2xl py-6">
           <div className="flex flex-col items-center gap-6 text-lg">
             {navMenus.map(menu => (
               <a 
