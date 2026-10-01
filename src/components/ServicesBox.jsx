@@ -13,12 +13,12 @@ import {
 
 const servicesData = [
   {
-    name: "Simple Games",
+    name: "Ecommerce Website",
     description:
       "I create responsive and user-friendly games using HTML, CSS and JavaScript.",
-    image: WebImage1,
+    image: WebImage4,
     icon: <AiFillPlaySquare className="text-4xl" />,
-    link: "https://github.com/henrygodwin650/rock-paper-scissors",
+    link: "https://henrygodwin650.github.io/Ecommerce-website/#/",
   },
   {
     name: "Simple Websites",
@@ -26,23 +26,23 @@ const servicesData = [
       "I create responsive and user-friendly websites using HTML, CSS, Bootstrap 5, Tailwind CSS and JavaScript.",
     image: WebImage3,
     icon: <AiFillLayout className="text-4xl" />,
-    link: "https://github.com/henrygodwin650/SingleHub",
+    link: "https://henrygodwin650.github.io/SingleHub/",
   },
   {
-    name: "Simple Calculators",
+    name: "Simple Game",
     description:
       "I create responsive and user-friendly calculators using HTML, CSS and JavaScript.",
-    image: WebImage4,
+    image: WebImage1,
     icon: <AiFillCalculator className="text-4xl" />,
-    link: "https://github.com/henrygodwin650/rock-paper-scissors/tree/master/Challenge%20Exercise",
+    link: "https://henrygodwin650.github.io/Hangman-webgame/",
   },
   {
-    name: "Netflix & YouTube Clones",
+    name: "YouTube Clones",
     description:
       "I create responsive and user-friendly web clones using HTML, CSS and JavaScript.",
     image: WebImage2,
     icon: <AiFillChrome className="text-4xl" />,
-    link: "https://github.com/henrygodwin650/Netflix--Ng-Clone",
+    link: "https://henrygodwin650.github.io/youtube-clone-website/",
   },
 ];
 
@@ -59,7 +59,7 @@ export const ServicesBox = () => {
               rel="noopener noreferrer"
               className="group"
             >
-              <div className="h-full rounded-2xl overflow-hidden bg-gray-900 text-white shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+              <div className="h-full rounded-2xl overflow-hidden bg-amber-900  text-orange-400 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
 
                 {/* Image Section */}
                 <div className="relative h-56 overflow-hidden">
@@ -69,7 +69,7 @@ export const ServicesBox = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
 
                   {/* Icon */}
                   <div className="absolute top-4 right-4 bg-white text-black p-3 rounded-xl shadow-md">
@@ -85,7 +85,7 @@ export const ServicesBox = () => {
                     {description}
                   </p>
 
-                  <button className="mt-5 px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors duration-300">
+                  <button className="mt-5 px-4 py-2 rounded-lg text-orange-500 font-bold hover:text-white bg-white hover:bg-orange-600 transition-colors duration-300">
                     View Project
                   </button>
                 </div>

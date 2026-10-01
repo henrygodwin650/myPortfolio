@@ -16,12 +16,12 @@ export default function Skills() {
     },
     {
       skillName: "Tailwind CSS",
-      percentage: 90,
+      percentage: 97,
       color: "from-cyan-500 to-sky-400",
     },
     {
       skillName: "Bootstrap",
-      percentage: 85,
+      percentage: 95,
       color: "from-purple-500 to-pink-500",
     },
     {
@@ -31,9 +31,14 @@ export default function Skills() {
     },
     {
       skillName: "React JS",
-      percentage: 80,
+      percentage: 90,
       color: "from-sky-400 to-blue-500",
     },
+    {
+      skillName: "TypeScript",
+      percentage: 60,
+      color: "from-red-600 to-red-400",
+    }
   ];
 
   return (
@@ -42,7 +47,7 @@ export default function Skills() {
       className="
         relative overflow-hidden
         py-20 px-5
-        bg-gradient-to-b
+        bg-linear-to-b
         from-slate-100 via-white to-slate-200
         dark:from-slate-950 dark:via-slate-900 dark:to-black
       "
@@ -139,7 +144,7 @@ export default function Skills() {
             <div
               className="
                 absolute
-                w-[420px] h-[420px]
+                w-105 h-105
                 rounded-full
                 border border-orange-500/20
               "
@@ -152,7 +157,7 @@ export default function Skills() {
                 font-black
                 text-transparent
                 bg-clip-text
-                bg-gradient-to-b
+                bg-linear-to-b
                 from-orange-500/20
                 to-orange-500/5
                 select-none

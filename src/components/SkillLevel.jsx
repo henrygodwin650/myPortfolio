@@ -51,7 +51,7 @@ export default function SkillLevel({
         <div
           className={`
             h-full rounded-full
-            bg-gradient-to-r ${color}
+            bg-linear-to-r ${color}
             transition-all duration-1000 ease-out
             group-hover:animate-pulse
           `}
