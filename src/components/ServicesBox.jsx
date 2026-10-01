@@ -15,7 +15,7 @@ const servicesData = [
   {
     name: "Ecommerce Website",
     description:
-      "I create responsive and user-friendly games using HTML, CSS and JavaScript.",
+      "I create responsive and user-friendly e-commerce websites using React, Tailwind CSS and JavaScript.",
     image: WebImage4,
     icon: <AiFillPlaySquare className="text-4xl" />,
     link: "https://henrygodwin650.github.io/Ecommerce-website/#/",
@@ -23,7 +23,7 @@ const servicesData = [
   {
     name: "Simple Websites",
     description:
-      "I create responsive and user-friendly websites using HTML, CSS, Bootstrap 5, Tailwind CSS and JavaScript.",
+      "I create responsive and user-friendly websites using React, Tailwind CSS and JavaScript.",
     image: WebImage3,
     icon: <AiFillLayout className="text-4xl" />,
     link: "https://henrygodwin650.github.io/SingleHub/",
@@ -31,7 +31,7 @@ const servicesData = [
   {
     name: "Simple Game",
     description:
-      "I create responsive and user-friendly calculators using HTML, CSS and JavaScript.",
+      "I create responsive and user-friendly calculators using React, TailwindCSS and Typescript.",
     image: WebImage1,
     icon: <AiFillCalculator className="text-4xl" />,
     link: "https://henrygodwin650.github.io/Hangman-webgame/",
@@ -39,7 +39,7 @@ const servicesData = [
   {
     name: "YouTube Clones",
     description:
-      "I create responsive and user-friendly web clones using HTML, CSS and JavaScript.",
+      "I create responsive and user-friendly web clones using React, Tailwind CSS and JavaScript.",
     image: WebImage2,
     icon: <AiFillChrome className="text-4xl" />,
     link: "https://henrygodwin650.github.io/youtube-clone-website/",
