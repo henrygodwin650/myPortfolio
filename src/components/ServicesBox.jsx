@@ -31,7 +31,7 @@ const servicesData = [
   {
     name: "Simple Game",
     description:
-      "I create responsive and user-friendly calculators using React, TailwindCSS and Typescript.",
+      "I create responsive and user-friendly calculators using React, TailwindCSS, Jamendo-Api and Javascript.",
     image: WebImage1,
     icon: <AiFillCalculator className="text-4xl" />,
     link: "https://henrygodwin650.github.io/Hangman-webgame/",
@@ -43,6 +43,14 @@ const servicesData = [
     image: WebImage2,
     icon: <AiFillChrome className="text-4xl" />,
     link: "https://henrygodwin650.github.io/youtube-clone-website/",
+  },
+  {
+    name: "Music App with API",
+    description:
+      "I create responsive and user-friendly Music App using React, Tailwind CSS and JavaScript.",
+    image: WebImage2,
+    icon: <AiFillChrome className="text-4xl" />,
+    link: "https://henrygodwin650.github.io/X-Sound/#/",
   },
 ];
 
